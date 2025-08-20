@@ -1,98 +1,131 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Trend Newset - भारत की ट्रेंडिंग न्यूज</title>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5789167219184007"
-      crossorigin="anonymous"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trend Newset - भारत की ट्रेंडिंग न्यूज़रूम</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; }
-        header { background: #0d47a1; color: #fff; padding: 1rem; text-align: center; font-size: 2em; }
-        #news { max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: #fff; padding: 1rem; margin: 1rem 0; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
-        .card img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 0.8rem; }
-        .title { font-size: 1.2em; font-weight: bold; }
-        .date { color: gray; font-size: 0.9em; margin-bottom: 0.5rem; }
-        .desc { margin: 0.5rem 0; white-space: pre-line; }
-        .src { color: #0d47a1; }
-        a.read-more { color: #0d47a1; cursor: pointer; text-decoration: underline; }
-        #refreshBtn {
-            background-color: #0d47a1; color: white; border: none; padding: 10px 20px;
-            border-radius: 5px; cursor: pointer; font-size: 1rem; margin: 1rem auto; display: block;
-        }
-        #refreshBtn:hover {
-            background-color: #084d8a;
-        }
-        footer { background: #0d47a1; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-    </style>
+<!-- Google AdSense Script -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5789167219184007" crossorigin="anonymous"></script>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f9fafb;
+    color: #333;
+  }
+  header {
+    background-color: #1e40af;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  main {
+    max-width: 960px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+  }
+  article {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  article h2 {
+    color: #1e40af;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  article p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  footer {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 1.3rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+  }
+  /* Ad container */
+  .ad-container {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 728px;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    header { font-size: 2rem; }
+    main { max-width: 90%; }
+  }
+</style>
 </head>
 <body>
-    <header>Trend Newset - भारत की ट्रेंडिंग न्यूज</header>
 
-    <button id="refreshBtn">नया समाचार दिखाएँ</button>
+<header>
+  Trend Newset - भारत की ट्रेंडिंग न्यूज़रूम
+</header>
 
-    <div id="news">
-        <div>भारत के लिए ट्रेंडिंग न्यूज लोड हो रही है...</div>
-    </div>
+<main>
 
-    <footer>&copy; 2025 Trend Newset</footer>
+  <!-- AdSense Top Banner Ad -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5789167219184007"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 
-    <script>
-        const API_KEY = 'pub_ba10060f808c429389c431dd483bb9e7';
-        const pageSize = 20; // ज्यादा समाचार दिखाने के लिए
+  <!-- Sample Article 1 -->
+  <article>
+    <h2>भारत में कोरोना की स्थिति अपडेट</h2>
+    <p>भारत में कोविड-19 के मामले धीरे-धीरे कम हो रहे हैं। सरकार नई गाइडलाइंस पर विचार कर रही है...</p>
+    <a href="#" target="_blank" rel="noopener">और पढ़ें</a>
+  </article>
 
-        function showFull(descId, linkId, fullText) {
-            document.getElementById(descId).innerText = fullText;
-            document.getElementById(linkId).style.display = 'none';
-        }
+  <!-- Sample Article 2 -->
+  <article>
+    <h2>तकनीक में नया आविष्कार</h2>
+    <p>भारतीय वैज्ञानिकों ने एक नया सौर उर्जा उपकरण विकसित किया है जो अधिक कुशल और पर्यावरण के अनुकूल है...</p>
+    <a href="#" target="_blank" rel="noopener">और पढ़ें</a>
+  </article>
 
-        async function loadNews() {
-            const newsDiv = document.getElementById('news');
-            newsDiv.innerHTML = `<div>भारत के लिए ट्रेंडिंग न्यूज लोड हो रही है...</div>`;
+  <!-- AdSense Inline Ad -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5789167219184007"
+         data-ad-slot="9876543210"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
 
-            // Hindi में paging का सपोर्ट नहीं है, केवल country और language ही दें। बाकी params हटाएँ।
-            const url = `https://newsdata.io/api/1/news?apikey=${API_KEY}&country=in&language=hi`;
+  <!-- Sample Article 3 -->
+  <article>
+    <h2>खेल जगत की बड़ी खबरें</h2>
+    <p>भारत ने क्रिकेट में एक नया रिकॉर्ड बनाया है। टीम ने शानदार प्रदर्शन से मुकाबले जीते...</p>
+    <a href="#" target="_blank" rel="noopener">और पढ़ें</a>
+  </article>
 
-            console.log("Fetching URL:", url);
+</main>
 
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                console.log("API Response:", data);
+<footer>
+  &copy; 2025 Trend Newset. सभी अधिकार सुरक्षित।
+</footer>
 
-                if ((data.status === 'success' || !data.status) && Array.isArray(data.results) && data.results.length > 0) {
-                    let out = `<div style="margin-bottom:1rem; font-weight:bold;">भारत की प्रमुख ट्रेंडिंग समाचार:</div>`;
-                    data.results.slice(0, pageSize).forEach((article, idx) => {
-                        let shortDesc = article.description && article.description.length > 150
-                                ? article.description.slice(0, 150) + "..."
-                                : article.description || "";
-                        let full = article.description || "";
-                        out += `<div class="card">
-                            ${article.image_url ? `<img src="${article.image_url}" alt="समाचार चित्र">` : ''}
-                            <div class="title">${article.title}</div>
-                            <div class="date">तिथि: ${article.pubDate ? new Date(article.pubDate).toLocaleString() : 'N/A'}</div>
-                            <div class="desc" id="desc-${idx}">${shortDesc}</div>
-                            ${full.length > 150 ? `<a class="read-more" id="readmore-${idx}" onclick="showFull('desc-${idx}','readmore-${idx}', ${JSON.stringify(full)})">पूरा पढ़ें</a>` : ''}
-                            <div><a href="${article.link}" target="_blank" class="src">${article.source_id}</a></div>
-                        </div>`;
-                    });
-                    newsDiv.innerHTML = out;
-                } else {
-                    newsDiv.innerHTML = `<div>कोई ट्रेंडिंग समाचार उपलब्ध नहीं है। कृपया कुछ समय बाद दोबारा प्रयास करें।</div>`;
-                }
-            } catch(error) {
-                newsDiv.innerHTML = `<div>समाचार लोड करने में त्रुटि। कृपया इंटरनेट कनेक्शन जांचें।</div>`;
-                console.error('Fetch error:', error);
-            }
-        }
+<script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-        document.getElementById('refreshBtn').onclick = loadNews;
-
-        // पेज ओपन होते ही समाचार लोड करें
-        loadNews();
-    </script>
 </body>
 </html>
