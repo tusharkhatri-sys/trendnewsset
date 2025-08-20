@@ -1,83 +1,125 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Trend Newset - भारत की ट्रेंडिंग न्यूज़रूम</title>
+  <meta charset="UTF-8" />
+  <title>Trend Newset - भारत की ट्रेंडिंग न्यूज</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5789167219184007" crossorigin="anonymous"></script>
 
-<!-- Google AdSense Script -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5789167219184007" crossorigin="anonymous"></script>
-
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #f9fafb;
-    color: #333;
-  }
-  header {
-    background-color: #1e40af;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  main {
-    max-width: 960px;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
-  }
-  article {
-    background-color: white;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  article h2 {
-    color: #1e40af;
-    font-weight: 700;
-    margin-top: 0;
-  }
-  article p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  footer {
-    background-color: #1e40af;
-    color: white;
-    text-align: center;
-    padding: 1.3rem;
-    font-weight: 600;
-    margin-top: 3rem;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
-  }
-  /* Ad container */
-  .ad-container {
-    margin: 2rem auto;
-    text-align: center;
-    max-width: 728px;
-  }
-  /* Responsive */
-  @media (max-width: 768px) {
-    header { font-size: 2rem; }
-    main { max-width: 90%; }
-  }
-</style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #1e40af;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    #news {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      max-height: 280px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 0.6rem;
+    }
+    .date {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+    .desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+      color: #444;
+    }
+    .read-more {
+      font-weight: 600;
+      color: #2563eb;
+      cursor: pointer;
+      text-decoration: underline;
+      user-select: none;
+    }
+    .src {
+      font-size: 0.9rem;
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .src:hover {
+      text-decoration: underline;
+    }
+    #refreshBtn {
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(30,64,175,0.6);
+      display: block;
+      margin: 30px auto;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      max-width: 220px;
+      text-align: center;
+    }
+    #refreshBtn:hover {
+      background-color: #3745b0;
+    }
+    footer {
+      background: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 1.4rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 600px) {
+      header { font-size: 2rem; padding: 1.2rem 0.5rem; }
+      #refreshBtn { max-width: 90%; padding: 14px 16px; font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
+  <header>Trend Newset - भारत की ट्रेंडिंग न्यूज</header>
+  
+  <button id="refreshBtn">नया समाचार दिखाएँ</button>
 
-<header>
-  Trend Newset - भारत की ट्रेंडिंग न्यूज़रूम
-</header>
+  <div id="news"><div>भारत के लिए ट्रेंडिंग न्यूज लोड हो रही है...</div></div>
 
-<main>
-
-  <!-- AdSense Top Banner Ad -->
-  <div class="ad-container">
+  <!-- Google AdSense Ad Unit -->
+  <div style="max-width:900px; margin: 40px auto 0 auto; text-align:center;">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-5789167219184007"
@@ -86,46 +128,68 @@
          data-full-width-responsive="true"></ins>
   </div>
 
-  <!-- Sample Article 1 -->
-  <article>
-    <h2>भारत में कोरोना की स्थिति अपडेट</h2>
-    <p>भारत में कोविड-19 के मामले धीरे-धीरे कम हो रहे हैं। सरकार नई गाइडलाइंस पर विचार कर रही है...</p>
-    <a href="#" target="_blank" rel="noopener">और पढ़ें</a>
-  </article>
+  <footer>&copy; 2025 Trend Newset</footer>
 
-  <!-- Sample Article 2 -->
-  <article>
-    <h2>तकनीक में नया आविष्कार</h2>
-    <p>भारतीय वैज्ञानिकों ने एक नया सौर उर्जा उपकरण विकसित किया है जो अधिक कुशल और पर्यावरण के अनुकूल है...</p>
-    <a href="#" target="_blank" rel="noopener">और पढ़ें</a>
-  </article>
+  <script>
+    const API_KEY = 'pub_ba10060f808c429389c431dd483bb9e7';
+    const pageSize = 20;
 
-  <!-- AdSense Inline Ad -->
-  <div class="ad-container">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5789167219184007"
-         data-ad-slot="9876543210"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-  </div>
+    function showFull(descId, linkId, fullText) {
+      const descEl = document.getElementById(descId);
+      const linkEl = document.getElementById(linkId);
+      if (descEl && linkEl) {
+        descEl.textContent = fullText;
+        linkEl.style.display = 'none';
+      }
+    }
 
-  <!-- Sample Article 3 -->
-  <article>
-    <h2>खेल जगत की बड़ी खबरें</h2>
-    <p>भारत ने क्रिकेट में एक नया रिकॉर्ड बनाया है। टीम ने शानदार प्रदर्शन से मुकाबले जीते...</p>
-    <a href="#" target="_blank" rel="noopener">और पढ़ें</a>
-  </article>
+    async function loadNews() {
+      const newsDiv = document.getElementById('news');
+      newsDiv.innerHTML = `<div>भारत के लिए ट्रेंडिंग न्यूज लोड हो रही है...</div>`;
 
-</main>
+      const url = `https://newsdata.io/api/1/news?apikey=${API_KEY}&country=in&language=hi`;
 
-<footer>
-  &copy; 2025 Trend Newset. सभी अधिकार सुरक्षित।
-</footer>
+      console.log("Fetching URL:", url);
 
-<script>
- (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("API Response:", data);
 
+        if ((data.status === 'success' || !data.status) && Array.isArray(data.results) && data.results.length > 0) {
+          let out = `<div style="margin-bottom:1rem; font-weight:bold;">भारत की प्रमुख ट्रेंडिंग समाचार:</div>`;
+          data.results.slice(0, pageSize).forEach((article, idx) => {
+            const imageUrl = article.image_url || 'https://via.placeholder.com/800x450?text=No+Image';
+            let shortDesc = article.description && article.description.length > 150
+                    ? article.description.slice(0, 150) + "..."
+                    : article.description || "";
+            let full = article.description || "";
+            out += `<div class="card">
+              <img src="${imageUrl}" alt="समाचार चित्र">
+              <div class="title">${article.title}</div>
+              <div class="date">तिथि: ${article.pubDate ? new Date(article.pubDate).toLocaleString() : 'N/A'}</div>
+              <div class="desc" id="desc-${idx}">${shortDesc}</div>
+              ${full.length > 150 ? `<a class="read-more" id="readmore-${idx}" onclick="showFull('desc-${idx}', 'readmore-${idx}', ${JSON.stringify(full)})">पूरा पढ़ें</a>` : ''}
+              <div><a href="${article.link}" target="_blank" class="src">${article.source_id}</a></div>
+            </div>`;
+          });
+          newsDiv.innerHTML = out;
+
+          // AdSense ads को पुश करें
+          (adsbygoogle = window.adsbygoogle || []).push({});
+
+        } else {
+          newsDiv.innerHTML = `<div>कोई ट्रेंडिंग समाचार उपलब्ध नहीं है। कृपया बाद में पुनः प्रयास करें।</div>`;
+        }
+      } catch (error) {
+        newsDiv.innerHTML = `<div>समाचार लोड करने में त्रुटि। कृपया इंटरनेट कनेक्शन जांचें।</div>`;
+        console.error('Fetch error:', error);
+      }
+    }
+
+    document.getElementById('refreshBtn').onclick = loadNews;
+
+    window.onload = loadNews;
+  </script>
 </body>
 </html>
